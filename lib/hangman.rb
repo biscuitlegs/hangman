@@ -8,8 +8,7 @@ class Computer
     include Dictionary
     attr_reader :word
 
-    def initialize(letters="", word=get_random_word)
-        @letters = letters
+    def initialize(word=get_random_word)
         @word = word
     end
 
@@ -19,12 +18,6 @@ class Computer
         end
         
         medium_words.sample.downcase
-    end
-
-    def get_matching_letters(letter)
-        @word.count(letter).times do
-            @letters += letter
-        end
     end
 
     def secret_word(guesses)
