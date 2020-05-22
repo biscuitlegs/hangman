@@ -1,0 +1,6 @@
+--- !ruby/object:Game
+player: !ruby/object:Player
+  guesses: aiouefr
+computer: !ruby/object:Computer
+  word: lederhosen
+guesses_left: 8
