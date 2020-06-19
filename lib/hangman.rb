@@ -2,7 +2,7 @@ require 'yaml'
 
 module Dictionary
     def dictionary
-        File.read("../dictionary.txt")
+        File.read("dictionary.txt")
     end
 end
 
@@ -121,7 +121,7 @@ class Game
     def self.load
         puts "Please enter the name of the save file you wish to load:"
         file_name = gets.chomp
-        file = File.read("../savegames/#{file_name}")
+        file = File.read("savegames/#{file_name}")
         saved_game = Game.unserialize(file)
     end
 
@@ -175,10 +175,10 @@ class Game
    private
 
     def save_game
-        Dir.mkdir("../savegames") if !Dir.exists?("../savegames")
+        Dir.mkdir("savegames") if !Dir.exists?("savegames")
 
         time = Time.now.to_s[0..18]
-        File.write("../savegames/#{time}", self.serialize)
+        File.write("savegames/#{time}.txt", self.serialize)
     end
 
     def matching_letters_message(word, guess)

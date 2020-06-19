@@ -1,6 +1,6 @@
 --- !ruby/object:Game
 player: !ruby/object:Player
-  guesses: aiouefr
+  guesses: ai
 computer: !ruby/object:Computer
-  word: lederhosen
-guesses_left: 8
+  word: balinese
+guesses_left: 13
